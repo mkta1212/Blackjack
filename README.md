@@ -1,6 +1,6 @@
 ## Blackjack game in Java
 
-![Main image](https://i.imgur.com/a/QXEPsDR.png)
+![Main image](https://imgur.com/a/QXEPsDR)
 
 ### About
 This is a one-player blackjack game, where the player plays against the dealer.
