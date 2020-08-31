@@ -80,8 +80,8 @@ public class MainPage extends JFrame{
 		getContentPane().add(hit2Btn);
 		getContentPane().add(stand2Btn);
 //		getContentPane().add(label);
-		getContentPane().add(checkBox);
-		getContentPane().add(label1);
+//		getContentPane().add(checkBox);
+//		getContentPane().add(label1);
 		setResizable(false);
 		add(panel1,BorderLayout.NORTH);
 		add(panel2,BorderLayout.CENTER);
@@ -99,7 +99,7 @@ public class MainPage extends JFrame{
 				doubleBtn.setVisible(false);
 				divideBtn.setVisible(false);
 				label.setVisible(false);
-				label1.setVisible(false);
+//				label1.setVisible(false);
 				blackjack.playerShuffle(false);
 				resultArea.append(blackjack.playerCard(false)+"\n");
 				if(!blackjack.secondPlayer())
@@ -149,7 +149,7 @@ public class MainPage extends JFrame{
 				doubleBtn.setVisible(false);
 				label.setVisible(false);
 				divideBtn.setVisible(false);
-				label1.setVisible(false);
+//				label1.setVisible(false);
 				standBtn.setEnabled(false);
 				hitBtn.setEnabled(false);
 				blackjack.firstStand(true);
@@ -199,7 +199,7 @@ public class MainPage extends JFrame{
 				divideBtn.setVisible(false);
 				hit2Btn.setVisible(true);
 				stand2Btn.setVisible(true);
-				label1.setVisible(false);
+//				label1.setVisible(false);
 				blackjack.createPlayer2();
 				resultArea.append(blackjack.playerCard(false)+"\n"+blackjack.playerCard(true)+"\n");
 				getContentPane().remove(playerCardPanel);
@@ -296,7 +296,7 @@ public class MainPage extends JFrame{
 				betAmount.setText("$"+blackjack.getMoney().getBet()*2);
 				bankAmount.setText("Your Bank: "+(blackjack.getMoney().showTotal()-blackjack.getMoney().getBet()*2));
 				doubleBtn.setVisible(false);
-				label1.setVisible(false);
+//				label1.setVisible(false);
 				blackjack.playerShuffle(false);
 //				resultArea.append(blackjack.playerCard(false)+"\n");
 				getContentPane().remove(playerCardPanel);
@@ -320,44 +320,44 @@ public class MainPage extends JFrame{
 			}
 		}
 		doubleBtn.addActionListener(new DoubleBtnActionListener());
-		checkBox=new JCheckBox("");
-		checkBox.setBounds(70,505,75,25);
-		class CheckBoxActionListener implements ActionListener
-		{
-			public void actionPerformed(ActionEvent e)
-			{
-				if(checkBox.isSelected())
-				{
-					label1.setVisible(true);
-				}
-				else
-				{
-					label1.setVisible(false);
-				}
-			}
-		}
-		checkBox.addActionListener(new CheckBoxActionListener());
-		checkBox.setBounds(50,550,20,20);
-		getContentPane().add(checkBox);
-		label1=new JLabel("");
-		label1.setFont(new Font("Arial", Font.BOLD, 20));
-		label1.setForeground(Color.ORANGE);
-		label1.setHorizontalAlignment(SwingConstants.CENTER);
-		label1.setBounds(10, 570,275, 50);
-		getContentPane().add(label1);
-		if(checkBox.isSelected())
-		{
-			label1.setVisible(true);
-		}
-		else
-		{
-			label1.setVisible(false);
-		}
-		JLabel rookieLabel=new JLabel("新手教學");
-		rookieLabel.setFont(new Font(null, Font.BOLD, 20));
-		rookieLabel.setForeground(Color.WHITE);
-		rookieLabel.setBounds(75,545,100,30);
-		getContentPane().add(rookieLabel);
+//		checkBox=new JCheckBox("");
+//		checkBox.setBounds(70,505,75,25);
+//		class CheckBoxActionListener implements ActionListener
+//		{
+//			public void actionPerformed(ActionEvent e)
+//			{
+//				if(checkBox.isSelected())
+//				{
+//					label1.setVisible(true);
+//				}
+//				else
+//				{
+//					label1.setVisible(false);
+//				}
+//			}
+//		}
+//		checkBox.addActionListener(new CheckBoxActionListener());
+//		checkBox.setBounds(50,550,20,20);
+//		getContentPane().add(checkBox);
+//		label1=new JLabel("");
+//		label1.setFont(new Font("Arial", Font.BOLD, 20));
+//		label1.setForeground(Color.ORANGE);
+//		label1.setHorizontalAlignment(SwingConstants.CENTER);
+//		label1.setBounds(10, 570,275, 50);
+//		getContentPane().add(label1);
+//		if(checkBox.isSelected())
+//		{
+//			label1.setVisible(true);
+//		}
+//		else
+//		{
+//			label1.setVisible(false);
+//		}
+//		JLabel rookieLabel=new JLabel("新手教學");
+//		rookieLabel.setFont(new Font(null, Font.BOLD, 20));
+//		rookieLabel.setForeground(Color.WHITE);
+//		rookieLabel.setBounds(75,545,100,30);
+//		getContentPane().add(rookieLabel);
 		JLabel betLabel=new JLabel("BET:");
 		betLabel.setFont(new Font(null, Font.BOLD, 20));
 		betLabel.setForeground(Color.WHITE);
@@ -425,28 +425,28 @@ public class MainPage extends JFrame{
 		repaint();
 		blackjack.dealerShuffle();
 		blackjack.dealerShuffle();
-		if(checkBox.isSelected())
-		{
-			label1.setVisible(true);
-		}
-		else
-		{
-			label1.setVisible(false);
-		}
+//		if(checkBox.isSelected())
+//		{
+//			label1.setVisible(true);
+//		}
+//		else
+//		{
+//			label1.setVisible(false);
+//		}
 		resultArea.append("Dealer card:"+blackjack.dealerFirstCard()+"\n\n");
 		dealerCardPanel = new CardGroupPanel(blackjack.dealerCard(), FRAME_WIDTH/2 - (blackjack.dealerCard().size() * 115-10)/2, 50, 105, 157, 10,true);
 		getContentPane().add(dealerCardPanel);
 		repaint();
-		Odd odd=new Odd();
-		try 
-		{
-			String str=odd.getMove(blackjack.getPlayerCard()[0],blackjack.getPlayerCard()[1],blackjack.getDealerFirstCardValue());
-			label1.setText("Recommend:"+str);
-		} 
-		catch (SQLException e) 
-		{
-			e.printStackTrace();
-		}
+//		Odd odd=new Odd();
+//		try 
+//		{
+//			String str=odd.getMove(blackjack.getPlayerCard()[0],blackjack.getPlayerCard()[1],blackjack.getDealerFirstCardValue());
+//			label1.setText("Recommend:"+str);
+//		} 
+//		catch (SQLException e) 
+//		{
+//			e.printStackTrace();
+//		}
 		if(!blackjack.firstCompare().equals(""))
 		{
 			getContentPane().remove(dealerCardPanel);
